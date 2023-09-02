@@ -1,9 +1,12 @@
+import Bundlr from '@bundlr-network/client/'
 import { env } from '@config/environment'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const jwk = JSON.parse(env.jwt)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log('test')
+
   if (req.method === 'POST') {
     const bundlr = new Bundlr('http://node2.bundlr.network', 'arweave', jwk)
     const { content } = req.body
