@@ -1,3 +1,10 @@
+import { HomeTopBar } from '@components/home/HomeTopBar'
+
 export default function App() {
-  return <div>App</div>
+  return (
+    <>
+      <HomeTopBar />
+      <p>App Page</p>
+    </>
+  )
 }

@@ -1,3 +1,10 @@
+import { HomeTopBar } from '@components/home/HomeTopBar'
+
 export default function Index() {
-  return <div>Index</div>
+  return (
+    <>
+      <HomeTopBar />
+      <div>Index</div>
+    </>
+  )
 }
