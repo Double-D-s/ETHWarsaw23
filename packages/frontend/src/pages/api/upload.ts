@@ -1,4 +1,4 @@
-import Bundlr from '@bundlr-network/client/'
+import Bundlr from '@bundlr-network/client'
 import { env } from '@config/environment'
 import type { NextApiRequest, NextApiResponse } from 'next'
 

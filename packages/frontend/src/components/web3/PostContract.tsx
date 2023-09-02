@@ -8,10 +8,29 @@ import {
 } from '@scio-labs/use-inkathon'
 import { contractTxWithToast } from '@utils/contractTxWithToast'
 import { FC, useEffect, useState } from 'react'
-import { useForm, Controller } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import 'twin.macro'
-import { stringToU8a, u8aToHex } from '@polkadot/util'
+
+async function areweaveContent(postContent: string) {
+  try {
+    const response = await fetch(`http://localhost:3000/api/upload`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: postContent,
+      }),
+    })
+    const data = await response.json()
+    // Do something with the data
+    return data['url'].split('/').pop()
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
 
 export const PostContract: FC = () => {
   const { api, activeAccount, isConnected, activeSigner } = useInkathon()
@@ -113,7 +132,7 @@ export const PostContract: FC = () => {
     console.log('adding new post')
 
     const postTitle = getValues('postTitle')
-    const postContent = getValues('postContent') //should be set to arweave link storing content
+    const postContent = await areweaveContent(getValues('postContent')) //should be set to arweave link storing content
     const isGated = false //getValues('isGated')
     setUpdateIsLoading(true)
     try {
@@ -208,7 +227,7 @@ export const PostContract: FC = () => {
                     render={({ field }) => (
                       <>
                         <FormControl>
-                          <FormLabel> Post Content</FormLabel>
+                          <FormLabel>Post Content</FormLabel>
                           <Input disabled={updateIsLoading} {...field} />
                         </FormControl>
                       </>
