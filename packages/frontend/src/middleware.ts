@@ -10,10 +10,9 @@ export default async function middleware(req: NextRequest) {
 
   // Get the pathname of the request (e.g. /, /about, /blog/first-post)
   const path = url.pathname
-  console.log(path, hostname, env.rootDomain, 'HEER')
   console.log(path, path === '/test')
 
-  // // testing page
+  // testing page
   // if (path === '/test') {
   //   return NextResponse.rewrite(new URL(`/test${path}`, req.url))
   // }

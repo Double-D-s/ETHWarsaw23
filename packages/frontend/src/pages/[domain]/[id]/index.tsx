@@ -1,3 +1,4 @@
+import BlogPost from '@components/BlockPost'
 import { HomeTopBar } from '@components/home/HomeTopBar'
 
 export default function Index() {
@@ -5,6 +6,7 @@ export default function Index() {
     <>
       <HomeTopBar />
       <div>Index</div>
+      <BlogPost />
     </>
   )
 }
