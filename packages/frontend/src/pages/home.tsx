@@ -1,3 +1,4 @@
+import { Button, Text } from '@chakra-ui/react'
 import { HomePageTitle } from '@components/home/HomePageTitle'
 import { HomeTopBar } from '@components/home/HomeTopBar'
 import { CenterBody } from '@components/layout/CenterBody'
@@ -37,6 +38,11 @@ const HomePage: NextPage = () => {
           {/* Greeter Read/Write Contract Interactions */}
           <GreeterContractInteractions />
         </div>
+      </CenterBody>
+      <CenterBody>
+        <Text fontSize={'xl'}>BLOG.ZERO</Text>
+        <Text fontSize={'m'}>Create your blog now!</Text>
+        <Button>Visit the dapp</Button>
       </CenterBody>
     </>
   )
