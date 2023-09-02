@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/build/typenum-423a95ecfd0585e0/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/build/typenum-423a95ecfd0585e0/out/op.rs

@@ -1,0 +1,1 @@
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/metadata-gen: /home/user/ethwarsaw/ETHWarsaw23/packages/contracts/blog_post/lib.rs /tmp/cargo-contract_JwD2aS/blog_post/.ink/metadata_gen/main.rs

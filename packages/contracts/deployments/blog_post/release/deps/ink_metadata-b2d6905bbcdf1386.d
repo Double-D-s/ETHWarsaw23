@@ -1,0 +1,11 @@
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/deps/ink_metadata-b2d6905bbcdf1386.rmeta: /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/lib.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/mod.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/validate.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/specs.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/utils.rs
+
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/deps/libink_metadata-b2d6905bbcdf1386.rlib: /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/lib.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/mod.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/validate.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/specs.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/utils.rs
+
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/deps/ink_metadata-b2d6905bbcdf1386.d: /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/lib.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/mod.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/validate.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/specs.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/utils.rs
+
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/lib.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/mod.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/layout/validate.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/specs.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.2.1/src/utils.rs:

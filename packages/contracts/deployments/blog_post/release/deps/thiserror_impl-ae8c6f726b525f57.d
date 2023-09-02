@@ -1,0 +1,12 @@
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/deps/libthiserror_impl-ae8c6f726b525f57.so: /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/lib.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/ast.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/attr.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/expand.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/fmt.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/generics.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/prop.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/valid.rs
+
+/home/user/ethwarsaw/ETHWarsaw23/packages/contracts/target/ink/blog_post/release/deps/thiserror_impl-ae8c6f726b525f57.d: /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/lib.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/ast.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/attr.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/expand.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/fmt.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/generics.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/prop.rs /home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/valid.rs
+
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/lib.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/ast.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/attr.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/expand.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/fmt.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/generics.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/prop.rs:
+/home/user/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.47/src/valid.rs:
