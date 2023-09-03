@@ -11,6 +11,7 @@ mod blog_post {
         feed: Mapping<u32, AccountId>,
         users: Mapping<AccountId, User>,
         posts: Mapping<AccountId, ink_prelude::vec::Vec<Post>>, 
+        payment_token: AccountId
     }
 
     #[derive(scale::Decode, scale::Encode)]
@@ -34,11 +35,12 @@ mod blog_post {
 
     impl BlogPost {
         #[ink(constructor)]
-        pub fn new() -> Self {
+        pub fn new(chosen_token: AccountId) -> Self {
             let feed = Mapping::new();
             let users = Mapping::new();
             let posts = Mapping::new();
-            Self { feed, users, posts }
+            let payment_token = chosen_token;
+            Self { feed, users, posts, payment_token }
         }
 
     #[ink(message)]

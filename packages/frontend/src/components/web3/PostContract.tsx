@@ -5,6 +5,7 @@ import {
   decodeOutput,
   useInkathon,
   useRegisteredContract,
+  polkadotjs,
 } from '@scio-labs/use-inkathon'
 import { contractTxWithToast } from '@utils/contractTxWithToast'
 import { FC, useEffect, useState } from 'react'
@@ -12,9 +13,13 @@ import { useForm, Controller } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import 'twin.macro'
 import { stringToU8a, u8aToHex } from '@polkadot/util'
+import { Keyring } from '@polkadot/keyring'
+import * as PolkadotKeyring from '@polkadot/keyring'
+import { mnemonicGenerate } from '@polkadot/util-crypto'
 
 export const PostContract: FC = () => {
   const { api, activeAccount, isConnected, activeSigner } = useInkathon()
+  console.log(useInkathon())
   const { contract, address: contractAddress } = useRegisteredContract(ContractIds.Post)
   const [greeterMessage, setGreeterMessage] = useState<string>()
   const [fetchIsLoading, setFetchIsLoading] = useState<boolean>()
@@ -29,15 +34,29 @@ export const PostContract: FC = () => {
     setFetchIsLoading(true)
     try {
       console.log(activeSigner)
+      // activeSigner.signRaw('test')
+
+      // const mnemonic = mnemonicGenerate()
+      // const alice = await new Keyring({ type: 'sr25519', ss58Format: 2 })
+      // const alice = PolkadotKeyring.keyring.addFromUri('//Alice')
+      // console.log(alice)
+
+      // create & add the pair to the keyring with the type and some additional
+      // metadata specified
+      // const pair = PolkadotKeyring.keyring.addFromUri(mnemonic, { name: 'first pair' }, 'ed25519')
+
+      // the pair has been added to our keyring
+      // console.log(PolkadotKeyring.keyring.pairs.length, 'pairs available')
+
       // create Alice based on the development seed
       // const alice = activeSigner //keyring.addFromUri('//Alice')
 
-      // // create the message, actual signature and verify
+      // create the message, actual signature and verify
       // const message = stringToU8a('this is our message')
       // const signature = alice.sign(message)
       // const isValid = alice.verify(message, signature, alice.publicKey)
 
-      // // output the result
+      // output the result
       // console.log(`${u8aToHex(signature)} is ${isValid ? 'valid' : 'invalid'}`)
 
       // return
@@ -81,6 +100,8 @@ export const PostContract: FC = () => {
       toast.error('Wallet not connected. Try again…')
       return
     }
+
+    console.log(activeSigner)
 
     const newMessage = getValues('fieldName')
 

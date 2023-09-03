@@ -3,4 +3,5 @@
 members = [
     "greeter",
     "blog_post",
+    "blog_token"
 ]
