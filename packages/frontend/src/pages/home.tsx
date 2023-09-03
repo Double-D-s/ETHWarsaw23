@@ -1,12 +1,10 @@
-import { Button, Text } from '@chakra-ui/react'
-import { HomePageTitle } from '@components/home/HomePageTitle'
-import { HomeTopBar } from '@components/home/HomeTopBar'
+import { Button, Link } from '@chakra-ui/react'
 import { CenterBody } from '@components/layout/CenterBody'
-import { ChainInfo } from '@components/web3/ChainInfo'
-import { ConnectButton } from '@components/web3/ConnectButton'
-import { GreeterContractInteractions } from '@components/web3/GreeterContractInteractions'
 import { useInkathon } from '@scio-labs/use-inkathon'
 import type { NextPage } from 'next'
+import Image from 'next/image'
+import NextLink from 'next/link'
+import inkathon from 'public/brand/laptop.png'
 import { useEffect } from 'react'
 import { toast } from 'react-hot-toast'
 import 'twin.macro'
@@ -21,30 +19,24 @@ const HomePage: NextPage = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <HomeTopBar />
-
       <CenterBody tw="mt-20 mb-10 px-5">
         {/* Title */}
-        <HomePageTitle />
-
-        {/* Connect Wallet Button */}
-        <ConnectButton />
-
         <div tw="mt-10 flex w-full flex-wrap items-start justify-center gap-4">
-          {/* Chain Metadata Information */}
-          <ChainInfo />
-
-          {/* Greeter Read/Write Contract Interactions */}
-          <GreeterContractInteractions />
+          <h1>
+            AlephBlog is your go-to place to post on-chian blog posts in the Aleph Zero ecosystem.
+            You have 100% ownership of your content - all on-chain and all immutable.{' '}
+          </h1>
+          <div tw="mt-10">
+            <Image src={inkathon} width={500} alt="ink!athon Logo" />
+          </div>
         </div>
       </CenterBody>
       <CenterBody>
-        <Text fontSize={'xl'}>BLOG.ZERO</Text>
-        <Text fontSize={'m'}>Create your blog now!</Text>
-        <Button as="a" colorScheme="blue">
-          Visit the dapp!
-        </Button>
+        <div tw="mb-20">
+          <Link as={NextLink} href="http://app.localhost:3000">
+            <Button colorScheme="blue">launch my blog</Button>
+          </Link>
+        </div>
       </CenterBody>
     </>
   )
