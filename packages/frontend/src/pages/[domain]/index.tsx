@@ -1,7 +1,27 @@
 'use client'
 import { SupportedChainId, resolveDomainToAddress } from '@azns/resolver-core'
-import { Box, Grid, GridItem, Text } from '@chakra-ui/react'
-import { CenterBody } from '@components/layout/CenterBody'
+import {
+  Box,
+  Button,
+  Container,
+  HStack,
+  Heading,
+  Link,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  SimpleGrid,
+  Spacer,
+  Text,
+  VStack,
+  useDisclosure,
+} from '@chakra-ui/react'
+import NextLink from 'next/link'
+
 import { ContractIds } from '@deployments/deployments'
 import {
   contractQuery,
@@ -9,7 +29,6 @@ import {
   useInkathon,
   useRegisteredContract,
 } from '@scio-labs/use-inkathon'
-import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
@@ -99,52 +118,79 @@ export default function Index(props: { domain: string }) {
   return (
     <>
       {/* <AzeroIdDisplay addy={address as string} /> */}
-      <CenterBody>
-        <Text fontSize={'2xl'}>
-          {domain}
-          <span color={'yellow'}>.TZERO</span>
-          {/* TODO use tailwind color yellow ^^ */}
-          <Text marginBottom={'8px'} fontWeight={'thin'} fontSize={'1xs'}>
-            {address}
-          </Text>
-          <hr />
-        </Text>
-        <Box>
-          <Grid templateColumns="repeat(auto-fit, minmax(200px, 1fr))" gap={6}>
-            {[
-              {
-                id: 1,
-                title: 'Post 1',
-                img: 'https://via.placeholder.com/150x150.png?text=Thumbnail',
-                description: 'Description for post 1',
-              },
-              {
-                id: 2,
-                title: 'Post 2',
-                img: 'https://via.placeholder.com/150x150.png?text=Thumbnail',
-                description: 'Description for post 2',
-              },
-              {
-                id: 3,
-                title: 'Post 3',
-                img: 'https://via.placeholder.com/150x150.png?text=Thumbnail',
-                description: 'Description for post 3',
-              },
-            ].map((post) => (
-              <GridItem key={post.id}>
-                <Box p={4}>
-                  <Image src={post.img} width={250} height={150} alt={''} />
-                  <Text fontSize={'1xl'}>Recent Posts</Text>
-                  <Text>{post.description}</Text>
-                </Box>
-              </GridItem>
-            ))}
-          </Grid>
-        </Box>
-      </CenterBody>
+      <Container maxW="container.sm" mt={'100px'}>
+        <HStack spacing={4}>
+          <VStack align={'flex-start'}>
+            <Heading as="h1" size="3xl">
+              Im, {domain}!
+            </Heading>
+            <Text fontSize="xs">Wa1llet Addy</Text>
+          </VStack>
+          <Spacer />
+          <HStack>
+            {DonationModal()}
+            {/* <Link as={NextLink} href="/newpost">
+              <Button as="a" colorScheme="blue">
+                Create Post
+              </Button>
+            </Link> */}
+          </HStack>
+        </HStack>
+        <VStack align={'flex-start'} mt={'20px'}>
+          <Heading as="h2" size="xl">
+            Recent Posts
+          </Heading>
+          <SimpleGrid columns={2} spacing={10} w={'full'}>
+            <Link as={NextLink} href="/01">
+              <Box p={'13px'} bg="whiteAlpha.300" height="150px" position="relative">
+                <Text fontSize={'md'} fontWeight={'bold'}>
+                  Post Title
+                </Text>
+                <Text
+                  fontWeight={'light'}
+                  position="absolute"
+                  bottom="0"
+                  right="0"
+                  marginRight="13px"
+                  marginBottom="13px"
+                >
+                  Posted
+                </Text>
+              </Box>
+            </Link>
+          </SimpleGrid>
+        </VStack>
+      </Container>
     </>
   )
 }
+
+function DonationModal() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  return (
+    <>
+      <Button onClick={onOpen} colorScheme="pink">
+        Donate
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalHeader>Donate to azureid</ModalHeader>
+
+          <ModalBody>donation form here</ModalBody>
+
+          <ModalFooter>
+            <Button onClick={onClose} variant="ghost">
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  )
+}
+
 // TODO 500.js if the getServerSideProps fails
 export async function getServerSideProps({ req, res, resolvedUrl }) {
   res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=59')

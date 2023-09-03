@@ -7,6 +7,7 @@ import {
   useRegisteredContract,
 } from '@scio-labs/use-inkathon'
 import { contractTxWithToast } from '@utils/contractTxWithToast'
+import { Editor } from 'novel'
 import { FC, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
@@ -229,6 +230,7 @@ export const PostContract: FC = () => {
                         <FormControl>
                           <FormLabel>Post Content</FormLabel>
                           <Input disabled={updateIsLoading} {...field} />
+                          <Editor />;
                         </FormControl>
                       </>
                     )}
