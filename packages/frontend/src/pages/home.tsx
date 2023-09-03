@@ -42,7 +42,9 @@ const HomePage: NextPage = () => {
       <CenterBody>
         <Text fontSize={'xl'}>BLOG.ZERO</Text>
         <Text fontSize={'m'}>Create your blog now!</Text>
-        <Button>Visit the dapp</Button>
+        <Button as="a" colorScheme="blue">
+          Visit the dapp!
+        </Button>
       </CenterBody>
     </>
   )

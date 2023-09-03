@@ -21,6 +21,7 @@
   "dependencies": {
     "@azns/resolver-core": "^1.4.0",
     "@azns/resolver-react": "^1.5.0",
+    "@bundlr-network/client": "^0.11.13",
     "@chakra-ui/react": "^2.8.0",
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
@@ -36,9 +37,14 @@
     "@polkadot/util": "^12.4.1",
     "@polkadot/util-crypto": "^12.4.1",
     "@scio-labs/use-inkathon": "^0.0.6",
+    "@upstash/ratelimit": "^0.4.4",
+    "@vercel/kv": "^0.2.2",
+    "ai": "^2.2.11",
     "next": "^13.4.19",
     "next-seo": "^6.1.0",
+    "novel": "^0.1.17",
     "nprogress": "^0.2.0",
+    "openai": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
@@ -46,6 +52,7 @@
     "react-icons": "^4.10.1",
     "sharp": "^0.32.5",
     "spinners-react": "^1.0.7",
+    "swr": "^2.2.2",
     "use-async-effect": "^2.2.7"
   },
   "devDependencies": {

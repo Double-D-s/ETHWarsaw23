@@ -14,4 +14,5 @@ export const env = {
   defaultChain: process.env.NEXT_PUBLIC_DEFAULT_CHAIN!,
   supportedChains: getSupportedChains(),
   rootDomain: process.env.NEXT_PUBLIC_ROOT_DOMAIN!,
+  jwt: process.env.NEXT_JWT!,
 }
