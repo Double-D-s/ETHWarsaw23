@@ -5,7 +5,6 @@ import {
   decodeOutput,
   useInkathon,
   useRegisteredContract,
-  polkadotjs,
 } from '@scio-labs/use-inkathon'
 import { contractTxWithToast } from '@utils/contractTxWithToast'
 import { Editor } from 'novel'
@@ -14,12 +13,7 @@ import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import 'twin.macro'
 
-import { stringToU8a, u8aToHex } from '@polkadot/util'
-import { Keyring } from '@polkadot/keyring'
-import * as PolkadotKeyring from '@polkadot/keyring'
-import { mnemonicGenerate } from '@polkadot/util-crypto'
-
-async function areweaveContent(postContent: string) {
+export async function areweaveContent(postContent: string) {
   try {
     const response = await fetch(`http://localhost:3000/api/upload`, {
       method: 'POST',

@@ -89,7 +89,9 @@ export const AzeroIdDisplay: FC<AzeroIdDisplayProps> = ({ addy }) => {
 export default function Index(props: { domain: string }) {
   const [pageIsLoading, setPageIsLoading] = useState<boolean>()
   const [address, setAddress] = useState<string>()
-
+  const { api, activeAccount, isConnected, activeSigner } = useInkathon()
+  const { contract, address: contractAddress } = useRegisteredContract(ContractIds.Post)
+  const { activeChain } = useInkathon()
   const { domain } = props
 
   async function resolveDomain() {
@@ -122,19 +124,12 @@ export default function Index(props: { domain: string }) {
         <HStack spacing={4}>
           <VStack align={'flex-start'}>
             <Heading as="h1" size="3xl">
-              Im, {domain}!
+              Blog from: {domain}!
             </Heading>
-            <Text fontSize="xs">Wa1llet Addy</Text>
+            <Text fontSize="xs">{activeAccount}</Text>
           </VStack>
           <Spacer />
-          <HStack>
-            {DonationModal()}
-            {/* <Link as={NextLink} href="/newpost">
-              <Button as="a" colorScheme="blue">
-                Create Post
-              </Button>
-            </Link> */}
-          </HStack>
+          <HStack>{DonationModal()}</HStack>
         </HStack>
         <VStack align={'flex-start'} mt={'20px'}>
           <Heading as="h2" size="xl">
